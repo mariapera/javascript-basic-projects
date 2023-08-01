@@ -186,14 +186,7 @@ ul {
 	margin: 0 auto;
 	margin-top: -1rem;
 }
-/*
-=============== 
-Products 
-===============
-*/
-.products {
-	padding: 3rem 0;
-}
+/* section-center */
 .section-center {
 	max-width: var(--max-width);
 	width: 90%;
@@ -203,6 +196,14 @@ Products
 	.section-center {
 		width: 95%;
 	}
+}
+/*
+=============== 
+Products 
+===============
+*/
+.products {
+	padding: 3rem 0;
 }
 .products-container {
 	display: grid;
