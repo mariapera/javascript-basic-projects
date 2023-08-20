@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+}
+
+.bg {position: absolute;
+    top: -30px;
+    left: -30px;
+    width: calc(100vw + 60px);
+    height: calc(100vh + 60px);
+    background: url('img.jpeg') no-repeat center/cover;
+    filter: blur(30px);
+    z-index: -1;
+    transition: filter 0.3s ease;
+}
+
+.loading-text {
+    font-size: 50px;
+    color: #fff;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
