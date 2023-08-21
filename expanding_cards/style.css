@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+body {
+	position: relative;
+	height: 100vh;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Poppins', sans-serif;
+	background-color: #e8e2df;
+	overflow: hidden;
+}
+h1 {
+	position: absolute;
+	top: 4vh;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 46px;
+	color: #333;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	white-space: nowrap;
+}
+.container {
+	width: 90vw;
+	max-width: 1170px;
+	height: 60vh;
+	display: flex;
+	gap: 10px;
+}
+.panel {
+	position: relative;
+	flex: 0.5;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 30px;
+	cursor: pointer;
+	transition: flex 1s ease-out;
+}
+.panel:nth-of-type(1) {
+	background-image: url('./images/small/tour-1.jpg');
+}
+.panel:nth-of-type(2) {
+	background-image: url('./images/small/tour-2.jpg');
+}
+.panel:nth-of-type(3) {
+	background-image: url('./images/small/tour-3.jpg');
+}
+.panel:nth-of-type(4) {
+	background-image: url('./images/small/tour-4.jpg');
+}
+.panel:nth-of-type(5) {
+	background-image: url('./images/small/tour-5.jpg');
+}
+.panel.active {
+	flex: 5;
+}
+
+.panel-title {
+	margin: 0;
+	position: absolute;
+	left: 0;
+	bottom: 10px;
+	font-size: 22px;
+	color: #fff;
+	font-weight: 500;
+	opacity: 0;
+	white-space: nowrap;
+	transition: opacity 1s 0.6s ease-out, left 1s 0.8s ease-out;
+}
+
+.panel.active .panel-title {
+	opacity: 0.9;
+	left: 30px;
+}
+
+@media screen and (max-width: 500px) {
+	h1 {
+		font-size: 36px;
+	}
+	.container {
+		width: 95vw;
+	}
+	.panel:nth-last-of-type(1),
+	.panel:nth-last-of-type(2) {
+		display: none;
+	}
+	.panel-title {
+		font-size: 18px;
+	}
+}
+
+@media screen and (min-width: 900px) {
+    .panel {
+        background-position: bottom;
+    }
+    .panel:nth-of-type(1) {
+        background-image: url('./images/medium/tour-md-1.jpg');
+    }
+    .panel:nth-of-type(2) {
+        background-image: url('./images/medium/tour-md-2.jpg');
+       
+    }
+    .panel:nth-of-type(3) {
+        background-image: url('./images/medium/tour-md-3.jpg');
+        background-position: bottom 20% center;
+    }
+    .panel:nth-of-type(4) {
+        background-image: url('./images/medium/tour-md-4.jpg');
+    }
+    .panel:nth-of-type(5) {
+        background-image: url('./images/medium/tour-md-5.jpg');
+        background-position: bottom 40%  center;
+    }
+}
