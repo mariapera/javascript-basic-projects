@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500&display=swap');
+* {
+	box-sizing: border-box;
+}
+:root {
+	--primary-color: #fff;
+	--secondary-color: #333;
+	--third-color: #dc2626;
+	--fourth-color: #facc15;
+
+	--transition: all 0.5s ease-in;
+}
+html {
+	transition: var(--transition);
+}
+html.dark {
+	--primary-color: #333;
+	--secondary-color: #fff;
+}
+html.dark {
+	color: var(--primary-color);
+	background-color: var(--secondary-color);
+}
+body {
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--secondary-color);
+	font-family: 'Heebo', sans-serif;
+	background-color: var(--primary-color);
+}
+
+.toggle-btn {
+	position: absolute;
+	top: 4rem;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 0.5rem 1.5rem;
+	font-size: 1.2rem;
+	color: var(--primary-color);
+	background-color: var(--secondary-color);
+	border: 0;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: var(--transition);
+}
+.toggle-btn:focus {
+	outline: none;
+}
+.clock-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+.clock {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	background-color: var(--fourth-color);
+	border-radius: 50%;
+	border: 3px solid var(--secondary-color);
+	box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+.needle {
+	--rotation: 0;
+	position: absolute;
+	bottom: 50%;
+	left: 50%;
+	transform-origin: bottom;
+	background-color: var(--secondary-color);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	z-index: 10;
+	transition: var(--transition);
+}
+.needle.hour {
+	width: 10px;
+	height: 35%;
+	transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+.needle.minute {
+	width: 7px;
+	height: 40%;
+	transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+.needle.second {
+	width: 4px;
+	height: 45%;
+	transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+	background-color: var(--third-color);
+}
+.circle-point {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 10px;
+	height: 10px;
+	transform: translate(-50%, -50%);
+	background-color: var(--third-color);
+	z-index: 11;
+	border-radius: 50%;
+}
+.circle-point::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 5px;
+	height: 5px;
+	transform: translate(-50%, -50%);
+	background-color: var(--secondary-color);
+	border-radius: 50%;
+}
+.number {
+	--rotation: 0deg;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transform: rotate(var(--rotation));
+	font-size: 1.6rem;
+	text-align: center;
+	font-weight: 500;
+}
+.number.number1 {--rotation:30deg}
+.number.number2 {--rotation:60deg}
+.number.number3 {--rotation:90deg}
+.number.number4 {--rotation:120deg}
+.number.number5 {--rotation:150deg}
+.number.number6 {--rotation:180deg}
+.number.number7 {--rotation:210deg}
+.number.number8 {--rotation:240deg}
+.number.number9 {--rotation:270deg}
+.number.number10 {--rotation:300deg}
+.number.number11 {--rotation:330deg}
+
+.time {
+	margin-top: 2rem ;
+	font-size: 5rem;
+	font-weight: 300;
+}
+.ampm {
+	font-size: 3rem;
+	font-weight: 400;
+}
+.date {
+	font-size: 1.2rem;
+	text-transform: uppercase;
+}
+.day {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	font-size: 1.2rem;
+	background-color: var(--secondary-color);
+	border-radius: 50%;
+	color: var(--primary-color);
+}
