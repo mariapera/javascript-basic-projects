@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;0,700;1,400&display=swap');
+
+:root {
+	--color-grey-1: #eee;
+	--color-grey-2: #777;
+	--color-grey-3: #444;
+	--color-grey-4: #222;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.section-tv {
+	width: 100%;
+	min-height: 100vh;
+	padding: 3rem 1rem;
+	display: grid;
+	place-items: center;
+	background-color: var(--color-grey-1);
+}
+
+.tv-container {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+}
+
+.tv {
+	position: relative;
+	width: 70vw;
+	max-width: 60rem;
+	height: 40vw;
+	max-height: 35rem;
+	border: 0.3rem solid var(--color-grey-4);
+	border-bottom-width: 0.8rem;
+}
+.tv::before {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: -2.5rem;
+	transform: translateX(-50%);
+	width: 1.5rem;
+	height: 2rem;
+	background-color: var(--color-grey-4);
+}
+
+.tv::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: -2.8rem;
+	transform: translateX(-50%);
+	width: 50%;
+	height: 0.35rem;
+	border-radius: 0.5rem;
+	background-color: var(--color-grey-4);
+}
+
+.tv-video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.controller {
+	width: 4.6rem;
+	padding: 2.5rem 0.5rem;
+	transform: rotate(-90deg);
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem 0.4rem;
+	align-items: center;
+	justify-content: space-around;
+	background-color: var(--color-grey-2);
+	border: 0.1rem solid var(--color-grey-4);
+	border-radius: 0.5rem 0.5rem 1.5rem 1.5rem;
+}
+
+.link-controller {
+	display: inline-block;
+	width: 1.5rem;
+	height: 1.5rem;
+	font-size: 0.875rem;
+	color: var(--color-grey-1);
+	text-decoration: none;
+	background-color: var(--color-grey-3);
+	border-radius: 50%;
+	border: 0.1rem solid var(--color-grey-4);
+	display: grid;
+	place-items: center;
+	transition: opacity 0.3s;
+}
+
+.link-controller:active {
+	opacity: 0.7;
+}
+
+@media (min-width: 768px) {
+	.controller {
+		width: 5.5rem;
+		padding: 3rem 0.6rem;
+		gap: 1rem 0.6rem;
+	}
+	.link-controller {
+		font-size: 1rem;
+	}
+}
+
+@media (min-width: 1170px) {
+	.tv-container {
+		flex-direction: row;
+		gap: 3rem;
+	}
+	.controller {
+        width: 6rem;
+		transform: rotate(0deg);
+	}
+    .link-controller {
+		width: 2rem;
+		height: 2rem;
+	}
+}
