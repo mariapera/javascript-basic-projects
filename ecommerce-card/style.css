@@ -1,0 +1,62 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+.ecommerce-card {
+	width: 100%;
+	height: 100vh;
+	padding: 5rem 0;
+	display: flex;
+	justify-content: center;
+	background-color: #a5d8ff;
+}
+
+.images-wrapper {
+	position: relative;
+	width: 80rem;
+	height: 80rem;
+	padding: 0 2rem;
+	background-color: #fff;
+}
+
+.images {
+	margin-top: 10rem;
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.5rem;
+}
+.img {
+	width: 10rem;
+	height: 10rem;
+	border: 0.1rem solid transparent;
+	transition: border 0.3s;
+}
+.img.change {
+	border: 0.1rem solid #444;
+}
+
+.img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.active-image {
+   width: 60rem;
+   height: 60rem;
+	position: absolute;
+	top: 10rem;
+	left: 15rem;
+}
+
+.active-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: scale-down;
+}
