@@ -1,0 +1,132 @@
+:root {
+	--color-primary-light: #fff9db;
+	--color-primary: #ffec99;
+	--color-secondary: #99e9f2;
+	--color-secondary-light: #adedf5;
+	--color-grey: #ced4da;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Comfortaa', cursive;
+}
+html {
+	font-size: 62.5%;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: 20rem repeat(2, 1fr);
+	justify-items: center;
+	align-items: center;
+    color: #222;
+}
+
+.heading {
+	grid-column: 2/3;
+	grid-row: 1/2;
+	font-weight: 700;
+	font-size: 4.5rem;
+	color: #777;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.3rem;
+	line-height: 1.4;
+}
+
+.car-models {
+	grid-column: 1/2;
+	grid-row: 2/4;
+	place-self: stretch;
+	display: grid;
+	grid-auto-rows: 1fr;
+	row-gap: 4rem;
+	padding: 0 2rem 4rem;
+}
+.car-models button {
+	padding: 2rem 0;
+	font-size: 1.6rem;
+	font-weight: 700;
+    letter-spacing: 0.1rem;
+	text-transform: capitalize;
+	border: none;
+	border-block: 0.1rem solid #ccc;
+	background-color: var(--color-primary-light);
+	transition: background-color 0.3s;
+	cursor: pointer;
+}
+
+button.active {
+	background-color: var(--color-grey);
+}
+
+.car-images {
+	grid-column: 2/3;
+	grid-row: 2/3;
+}
+
+.car-images img {
+	width: 100%;
+	height: 100%;
+	/* object-fit: cover; */
+}
+
+.car-properties {
+	grid-column: 3/4;
+	grid-row: 2/4;
+	place-self: stretch;
+	display: grid;
+	grid-auto-rows: 1fr;
+	row-gap: 4rem;
+	padding: 0 2rem 4rem;
+}
+
+.car-properties div {
+	display: flex;
+	column-gap: 4rem;
+	border-block: 0.1rem solid #ccc;
+}
+
+.car-properties div:first-child span {
+	background-color: var(--color-primary);
+}
+
+.car-properties span {
+	flex: 1;
+	display: grid;
+	place-items: center;
+	padding: 1rem;
+	font-size: 1.2rem;
+	text-transform: capitalize;
+	background-color: var(--color-primary-light);
+}
+
+.car-properties span:first-child {
+    font-weight: 700;
+}
+
+.reserve-btn {
+	grid-column: 2/3;
+	grid-row: 3/4;
+	align-self: flex-end;
+	margin-bottom: 4rem;
+	border: none;
+	border-block: 0.1rem solid #ccc;
+	padding: 2rem 4rem;
+	font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+	background-color: var(--color-secondary);
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.reserve-btn:hover {
+	background-color: var(--color-secondary-light);
+}

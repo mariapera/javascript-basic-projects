@@ -1,0 +1,52 @@
+[
+  {
+    "rent per day": "$55",
+    "mark": "audi",
+    "modal": "A6",
+    "year": 2018,
+    "doors": "4/5",
+    "ac": "Yes",
+    "transmission": "automatic",
+    "fuel": "gasoline"
+  },
+  {
+    "rent per day": "$60",
+    "mark": "BMW",
+    "modal": "X6",
+    "year": 2017,
+    "doors": "4/5",
+    "ac": "Yes",
+    "transmission": "automatic",
+    "fuel": "gasoline"
+  },
+  {
+    "rent per day": "$200",
+    "mark": "Mercedes",
+    "modal": "AMG Gt S V8",
+    "year": 2016,
+    "doors": "2/3",
+    "ac": "Yes",
+    "transmission": "automatic",
+    "fuel": "gasoline"
+  },
+  {
+    "rent per day": "$100",
+    "mark": "Toyota",
+    "modal": "Land Cruiser",
+    "year": 2015,
+    "doors": "4/5",
+    "ac": "Yes",
+    "transmission": "automatic",
+    "fuel": "gasoline"
+  },
+  {
+    "rent per day": "$50",
+    "mark": "Volkswagen",
+    "modal": "T Prime",
+    "year": 2017,
+    "doors": "4/5",
+    "ac": "Yes",
+    "transmission": "automatic",
+    "fuel": "gasoline"
+  }
+]
